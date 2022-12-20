@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=La+Belle+Aurore&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Raleway&display=swap');
+/*-------------Website Theme ----------------*/
+:root{
+  --hue-1:174;
+  --hue-2:36;
+  --bg-color:hsl(var(--hue-1), 100%, 50%);
+  --bg-main-:rgb(218, 243, 242);
+  --main-color-1:hsl(var(--hue-1), 100%, 50%);
+  --main-color-dark-1:hsl(var(--hue-1), 69%, 40%);
+  --main-color-2:hsl(var(--hue-2), 62%, 56%);
+  --main-color-dark-2:hsl(var(--hue-2), 46%, 56%);
+  --bg-color-1:hsl(var(--hue-1), 100%, 50%);
+  --bg-color-2:#fff;
+  --bg-color-3:hsl(var(--hue-1), 100%, 53%);
+  --bg-color-transparent:rgba(255, 255, 255, 0.492);
+  --heading-color:hsl(var(--hue-1), 79%, 24%);
+  --text-color:rgb(17, 43, 53);
+}
+/*-------------GEN Style ----------------*/
+
+*{
+    margin: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: var(--bg-main-);
+}
+body{
+    overflow-x: hidden;
+    font-family: "Raleway", sans-serif;
+  }
+::selection{
+  background-color: hsl(var(--hue-1), 100%, 50%, 0.9);
+  color:#fff;
+}
+/*-----------------Reusable CSS Code------------------*/
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 75rem;
+  padding: 0 1.5rem;
+  margin:0 auto ;
+  font-family: "Raleway", sans-serif;
+
+    
+}
+/*-----------------Navbar styling------------------*/
+header{
+  position:fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: 10;
+}
+
+nav .container{
+    display: inline-block;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.links{
+  flex:1;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-left: 10%;
+}
+.links ul{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.logo{
+  margin-right: 2rem;
+  height: 120px;
+  line-height: 115px;
+  width: 120px;
+  font-family: "Dancing Script", sans-serif;
+  color: var(--heading-color);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  position: absolute;
+}
+.logo span{
+  color: var(--main-color-2);
+  font-family: "Raleway", sans-serif;
+  }
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    font-weight: 500;
+    opacity: 0.9 ;
+    transform: 0.5s;
+    margin: 10px 10px ;
+}
+nav ul li a{
+  position: relative;
+  display: inline-block;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  color: var(--text-color);
+  font-weight: 500;
+  opacity: 0.9 ;
+  transform: 0.5s;
+}
+nav ul li a::after{
+  content: "";
+  color: var(--heading-color);
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--main-color-2);
+  bottom: 0%;
+  left: -5px;
+  z-index: -1;
+  opacity: 0.2;
+  transition: 0.6s;
+}
+nav ul li a:hover{
+  color: var(--heading-color);
+}
+nav ul li a:hover:after{
+  color: var(--heading-color);
+  width: 100%;
+  opacity: 0.2;
+}
+
+.toggle-btn{
+  color: var(--heading-color);
+  min-width: 40px;
+  height: 40px;
+  background-color: var(--bg-color-2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+.toggle-btn:hover{
+  filter: brightness(97%);
+
+}
+/* ----------------------Showcase Area Style -----------------------*/
+.showcase-area{
+  padding: 120px 0;
+  width: 100%;
+  overflow: hidden;
+}
+.showcase-area .container{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  height: calc(100% - 120px);
+  max-height: 600px;
+  align-items: center;
+}
+.sub-heading{
+color: var(--heading-color);
+text-transform: uppercase;
+font-style: 0.75rem;
+letter-spacing: 0.5px;
+border-left: 3px solid var(--main-color-2);
+padding: .13rem .75rem;
+margin-bottom: 1rem;
+font-weight: 500;
+}
+.heaading{
+  color: var(--heading-color);
+  font-style: 3rem;
+  font-family: "Dancing Script", sans-serif;
+}
+.text{
+  color: var(--text-color);
+  font-style: 0.9rem;
+  margin: 2rem 0;
+}
+.showcase-area  .heaading{
+  margin-bottom: 3.5rem;
+}
+.showcase-area  .text{
+  margin: 0.8rem 0;
+}
+.cta{
+  margin-top: 3.5rem;
+display: flex;
+align-items: center;
+}
+.cta .btn {
+margin-right: 1.5rem;
+}
+.btn{
+  display: inline-block;
+  padding: 0. 9rem 1.75rem;
+  border-radius : 17px;
+  background-color: var(--main-color-2) ;
+  color:#fff;
+  font-size: 0.85rem;
+  letter-spacing : 0. 4px;
+  text-transform : capitalize;
+  transition: 0.3s;
+}
+  .btn:hover{
+    background-color: var(--main-color-dark-1);
+  }
+  
+
+
+
+@media screen and (max-width: 800px) {
+    .w3-bar .w3-button  {
+    float: none;
+    display: list-item;
+  }
+}
+
+
+
+
