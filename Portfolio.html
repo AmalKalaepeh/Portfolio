@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Amal KA </title>
-  <link rel="icon" type="imsubject/x-icon" href="2022-12-06.png">
+  <link rel="icon" type="imsubject/x-icon" href="image/2022-12-06.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Portofilo">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style> body{ background-color: var(--bg-main-);} </style>
 </head>
     <body>
        <header>
@@ -26,15 +27,15 @@
                 <ul>
                     <li><a href="#AboutMe"><i class="uil uil-user"></i> About Me</a></li>
                     <li><a href="#Portfolio"><i class="uil uil-user-circle"></i> Portfolio</a></li>
-                    <li><a href="#contact" ><i class="uil uil-comment-lines"></i> Contact</a></li>
+                    <li><a href="#Contact" ><i class="uil uil-comment-lines"></i> Contact</a></li>
                 </ul>
-                 <i class="uil uil-moon toggle-btn"></i>
+                 <!-- dark mood <i class="uil uil-moon toggle-btn"></i> -->
             </div>
         </nav>
        </header> 
        <sectionx></section>
        <main>
-        <section class="showcase-area">
+        <section id="AboutMe" class="showcase-area">
             <div class="container">
                 <div class="showcase-info">
                     <h5 class="sub-heading">Software Programmor</h5>
@@ -42,66 +43,72 @@
                     <p class="text">I'm Amal ,<mark>18 years old</mark> <br> And I'm IT student at FTU ( Fatoni University )</p> 
                     <p class="text1">My Experience is the Fundamental of C, Java, HTML, PHP And CSS</p>
                     <div class="cta">
-                        <a href="#Contact" class="btn">Contact Me!</a>
-                        <a href="#" class="btn secndary-btn">Download CV</a>
+                        <a href="mailto:amalmudor@gmail.com" class="btn">Contact Me!</a>
+                        <a href="image/Résumé.png" download class="btn secndary-btn">Download CV</a>
                     </div>
                 </div>
-                <div class="showcase-image"></div>
+                <div class="showcase-image">
+                    <img src="image/Lulu.png" class="prason" alt="amal" >
+                </div>
             </div>
         </section>
             <!-- Portfolio Section -->
-            <div class="Portfolio">
-                <h2><b>Portfolio me </b></h2><hr/>
-                <p>Here you can find my Portfolio</p>
-                <picture>
-                  <source src="amal ka logo.png" media="(min-width:320px ; height:240;)">
-                  <img src="amal ka logo.png"alt="logo image" style="width:320px ; height:240;">
-              </picture>  <br>
-                <video width="320" height="240" controls>
-                  <source src="Ubuntu 64-bit first - VMware.mp4" type="video/mp4">
-                  <source src="Ubuntu 64-bit first - VMware.ogg" type="video/ogg">
-                  <source src="Ubuntu 64-bit first - VMware.WebM" type="video/WebM">
-                </video>
-              <br>
-                <audio width="320" height="240" controls>
-                  <source src=".ogg" type="audio/ogg">
-                  <source src="horse.mp3" type="audio/mpeg">
-                </audio>     
-            </div>
-            <!-- Contact Section -->
-            <div class="Contact">
-                <h3><b>CONTACT</b></h3>
-                <p >Lets get in touch. Send us a messsage:</p>
-                <div style="margin-top:48px">
-                  <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Yala, Thailan</p>
-                  <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +66 151515</p>
-                  <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: Lu@mail.com</p>
-                  <form action="Contact_us.php" target="_blank">
-                    <select style="width:185px; " required>
-                      <option>Select Your Title</option>
-                      <option value="black" style="color:blueviolet">Mr</option>
-                      <option value="black" style="color:black">Mrs</option>
-                      <option value="black" style="color:blueviolet">Miss</option>
-                      <option value="black" style="color:black">Master</option>
-                    </select><br>
-                    <label for="name">NAME:</label><br>
-                    <input type="text" id="name" name="name"  value=""  placeholder="Your name And Lastname.." pattern="[A-Za-z]{.2}" title="9 letter for username" required><br>
-                    <label for="email">EMAIL:</label><br>
-                    <input type="email" id="email" name="email" value=""  placeholder="Your email.."  pattern="(.+@gmail\.com|.+@icloud\.com)" title="email can only be Gmail or icloud" required><br>
-                    <label for="subject">SUBJECT:</label><br>
-                    <input type="text" id="subject" name="subject" value="" placeholder="Write something.." pattern="[A-Za-z]{20}" title="handle 20 letter" required><br>
-                    <label for="message">MESSAGE:</label><br>
-                    <textarea type="text" id="message" name="message" value="" placeholder="Let us wher your voice.." style="height:200px"  required></textarea><br>
-                    <label for="img">Choose Your Portfolio</label>
-                    <input type="file" id="img" name="img" accept="image/png, .pdf" multiple >
-                    <input type="submit" value="Submit">
-                    <input type="checkbox" checked="checked" name="remember"> Remember me </label>
-                </form>
+        <section id="Portfolio" class="Portfolio">
+            <div class="container">
+                    <h3 class="sub-heading">Portfolio</h3>
+                    <p calss="tt">Here you can find my Portfolio</p>
+                    <picture>
+                        <img src="image/amal ka logo.png" class="logopic" alt="logo image">
+                    </picture><br>
+                    <video class="video" controls>
+                        <source src="image/about me vid.mp4" type="video/mp4">
+                        <source src="image/about me vid.ogg" type="video/ogg">
+                        <source src="image/about me vid.WebM" type="video/WebM">
+                    </video>
+                <br>
+                    <audio class="audio" controls>
+                    <source src=".ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                    </audio>     
                 </div>
-                
-              </div>
+             </div>
+        </section>
+            <!-- Contact Section -->
+        <section id="Contact" class="Contact">
+            <div class="container">
+                <h3 class="sub-heading">CONTACT</h3>
+                <p >Let's get in touch. Send me a messsage:</p>
+                <div>
+                    <p><i class="uil uil-map-marker"></i> Yala, Thailan</p>
+                    <p><i class="uil uil-phone-alt"></i> Phone: +66 522 954 3404</p>
+                    <p><i class="uil uil-at"></i> Email: amalmudor@mail.com</p>
+                        <form action="Contact_us.php" target="_blank">
+                            <select style="width:185px; " required>
+                            <option>Select Your Title</option>
+                            <option value="black" style="color:blueviolet">Mr</option>
+                            <option value="black" style="color:black">Mrs</option>
+                            <option value="black" style="color:blueviolet">Miss</option>
+                            <option value="black" style="color:black">Master</option>
+                            </select><br>
+                            <label for="name">NAME:</label><br>
+                            <input type="text" id="name" name="name"  value=""  placeholder="Your name And Lastname.." pattern="[A-Za-z]{.2}" title="9 letter for username" required><br>
+                            <label for="email">EMAIL:</label><br>
+                            <input type="email" id="email" name="email" value=""  placeholder="Your email.."  pattern="(.+@gmail\.com|.+@icloud\.com)" title="email can only be Gmail or icloud" required><br>
+                            <label for="subject">SUBJECT:</label><br>
+                            <input type="text" id="subject" name="subject" value="" placeholder="Write something.." pattern="[A-Za-z]{20}" title="handle 20 letter" required><br>
+                            <label for="message">MESSAGE:</label><br>
+                            <textarea type="text" id="message" name="message" value="" placeholder="Let us wher your voice.." style="height:200px"  required></textarea><br>
+                            <label for="img">Choose Your Portfolio</label>
+                            <input type="file" id="img" name="img" accept="image/png, .pdf" multiple >
+                            <input type="submit" value="Submit">
+                            <input type="checkbox" checked="checked" name="remember"> Remember me </label>
+                        </form>
+                </div>
+            </div>
+        </section>
        </main>
 <!-------JS Files ---------->
-
+       <script src="JS.js"></script>
     </body>
+    <footer class="footer">2022 All rights goes to Lu <i class="uil uil-closed-captioning"></i></footer>
 </html>

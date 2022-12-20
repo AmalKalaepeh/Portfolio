@@ -10,6 +10,7 @@
   --main-color-1:hsl(var(--hue-1), 100%, 50%);
   --main-color-dark-1:hsl(var(--hue-1), 69%, 40%);
   --main-color-2:hsl(var(--hue-2), 62%, 56%);
+  --main-color-2-transparent:hsl(var(--hue-1), 79%, 24%, 0.4);
   --main-color-dark-2:hsl(var(--hue-2), 46%, 56%);
   --bg-color-1:hsl(var(--hue-1), 100%, 50%);
   --bg-color-2:#fff;
@@ -22,13 +23,13 @@
 
 *{
     margin: 0;
-    font-size: 16px;
+    font-size: 1.5rem;
     box-sizing: border-box;
-    background-color: var(--bg-main-);
 }
 body{
     overflow-x: hidden;
     font-family: "Raleway", sans-serif;
+    background-color: var(--bg-main-);
   }
 ::selection{
   background-color: hsl(var(--hue-1), 100%, 50%, 0.9);
@@ -42,8 +43,7 @@ body{
   padding: 0 1.5rem;
   margin:0 auto ;
   font-family: "Raleway", sans-serif;
-
-    
+  background-color: transparent;
 }
 /*-----------------Navbar styling------------------*/
 header{
@@ -52,19 +52,33 @@ header{
   left: 0%;
   width: 100%;
   z-index: 10;
+  transition: 0.3s;
 }
-
+header.scrolled{
+  background-color: var(--bg-color-transparent);
+  box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+}
 nav .container{
     display: inline-block;
     align-items: center;
     flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+header.logo{
+  height: 120px;
+  line-height: 120px;
+}
+header.scrolled.logo{
+  height: 80px;
+  line-height: 80px;
 }
 .links{
   flex:1;
   display: flex;
   justify-content: space-between;
-  padding-top: 5%;
-  padding-left: 10%;
+  padding-left: 7%;
 }
 .links ul{
   display: flex;
@@ -73,14 +87,15 @@ nav .container{
 }
 .logo{
   margin-right: 2rem;
+  padding-top: 1%;
   height: 120px;
-  line-height: 115px;
   width: 120px;
   font-family: "Dancing Script", sans-serif;
   color: var(--heading-color);
   font-size: 2rem;
   letter-spacing: 1px;
   position: absolute;
+  transition: 0.3s;
 }
 .logo span{
   color: var(--main-color-2);
@@ -128,11 +143,12 @@ nav ul li a:hover:after{
   width: 100%;
   opacity: 0.2;
 }
-
+/*
 .toggle-btn{
   color: var(--heading-color);
   min-width: 40px;
   height: 40px;
+  margin-right: 1rem;
   background-color: var(--bg-color-2);
   border-radius: 50%;
   display: flex;
@@ -146,17 +162,18 @@ nav ul li a:hover:after{
 .toggle-btn:hover{
   filter: brightness(97%);
 
-}
+}*/
 /* ----------------------Showcase Area Style -----------------------*/
 .showcase-area{
   padding: 120px 0;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .showcase-area .container{
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  height: calc(100% - 120px);
+  grid-template-columns: repeat(1fr 1);
+  height: calc(100% - 120vh);
   max-height: 600px;
   align-items: center;
 }
@@ -201,14 +218,122 @@ margin-right: 1.5rem;
   background-color: var(--main-color-2) ;
   color:#fff;
   font-size: 0.85rem;
-  letter-spacing : 0. 4px;
+  letter-spacing : 0.4px;
   text-transform : capitalize;
   transition: 0.3s;
 }
-  .btn:hover{
+.btn:hover{
     background-color: var(--main-color-dark-1);
+}
+.btn.secndary-btn{
+  position: relative;
+  background-color: transparent;
+  color: var(--heading-color) ;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  border-bottom : 2.5px solid var(--main-color-2) ;
+  border-radius : 0px;
+  padding: 0.15rem 0;
+}
+.btn.secndary-btn::after{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  bottom: -2.5px;
+  left: 0;
+  background-color: var(--heading-color);
+  transition: .3s ease-in-out;
+}
+.btn.secndary-btn:hover::after{
+  width: 100%;
+}
+
+.showcase-image{
+  position: relative;
+  width: calc(100% - 120px);
+  min-height: calc(100% + 120px);
+  height: 700px;
+  background-image: linear-gradient(
+    125deg,
+    var(--heading-color),
+    var(--main-color-2)50%
+    );
+    margin-top: -400px;
+    left: 70%;
+    border-radius:0 0 50px 50px ;
+}
+.showcase-image .prason{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius:0 0 50px 50px ;
+}
+/* ----------------------Portfolio section Style -----------------------*/
+
+.Portfolio{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--main-color-2-transparent);
+  border-radius:15px ;
+  padding-top: 4%;
+  padding-bottom: 4%;
+
+}
+.Portfolio .container{
+  display: grid;
+  grid-template-columns: repeat(2fr 1);
+  height: 120%;
+  max-height: 600px;
+  align-items: center;
+}
+.sub-heading{
+  color: var(--heading-color);
+  text-transform: uppercase;
+  font-style: 0.75rem;
+  letter-spacing: 0.5px;
+  border-left: 3px solid var(--main-color-2);
+  padding: .13rem .75rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
   }
-  
+  .tt{
+    color: var(--main-color-2);
+    font-size: 12px;
+    margin: 2rem 0;
+  }
+  .logopic{
+    position: absolute;
+    width: 10vw;
+    min-height: 5vh;
+    left:90%;
+    bottom: 0;
+    top: -3%;
+    }
+    .video{
+      width: 120%;
+      min-height: 60%;
+      padding: 5%;
+      justify-items: center;
+    }
+    .audio{
+      position: relative;
+      width: 100%;
+      height: 20%;
+    }
+
+/* ----------------------Contact section Style -----------------------*/
+.Contact{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+}
 
 
 
