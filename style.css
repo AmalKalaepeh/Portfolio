@@ -1,3 +1,4 @@
+/*------------- Fonts used ----------------*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=La+Belle+Aurore&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=La+Belle+Aurore&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Raleway&display=swap');
@@ -172,7 +173,7 @@ nav ul li a:hover:after{
 }
 .showcase-area .container{
   display: grid;
-  grid-template-columns: repeat(1fr 1);
+  grid-template-columns: repeat(1fr 2);
   height: calc(100% - 120vh);
   max-height: 600px;
   align-items: center;
@@ -194,8 +195,11 @@ font-weight: 500;
 }
 .text{
   color: var(--text-color);
-  font-style: 0.9rem;
+  font-size: 1.1rem;
   margin: 2rem 0;
+}
+.text mark{
+  font-size: 1.1rem;
 }
 .showcase-area  .heaading{
   margin-bottom: 3.5rem;
@@ -253,8 +257,8 @@ margin-right: 1.5rem;
 .showcase-image{
   position: relative;
   width: calc(100% - 120px);
-  min-height: calc(100% + 120px);
-  height: 700px;
+  min-height: 90vh;
+  max-height: 600vh;
   background-image: linear-gradient(
     125deg,
     var(--heading-color),
@@ -272,6 +276,33 @@ margin-right: 1.5rem;
   transform: translateX(-50%);
   border-radius:0 0 50px 50px ;
 }
+.dots{
+  width: 5vw;
+}
+.square{
+  width: 7vw;
+}
+.showcase-area .dots{
+  position: absolute;
+  left: 100%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+.showcase-area .circle{
+  position: absolute;
+  width: 9vw;
+  left: 0;
+  top: 80%;
+  transform: translate(-50%, -50%);
+}
+.showcase-area .square{
+  position: absolute;
+  left: 15%;
+  bottom: 1%;
+  transform: translate(-50%, -50%);
+}
+
+
 /* ----------------------Portfolio section Style -----------------------*/
 
 .Portfolio{
@@ -321,8 +352,7 @@ margin-right: 1.5rem;
       padding: 5%;
       justify-items: center;
     }
-    .audio{
-      position: relative;
+    .Viocenote{
       width: 100%;
       height: 20%;
     }
@@ -335,15 +365,33 @@ margin-right: 1.5rem;
     font-family: "Raleway", sans-serif;
 }
 
-
-
-@media screen and (max-width: 800px) {
-    .w3-bar .w3-button  {
-    float: none;
-    display: list-item;
-  }
+/* ----------------------footer Style -----------------------*/
+.footer{
+   width: 100%;
+   padding: 10px;
+   height: 100px;
+    overflow: hidden;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
 }
 
+
+
+/* --------------- 1000px Screens --------------- */
+
+@media (max-width: 1000px) {
+}
+
+/* --------------- 768px Screens --------------- */
+
+@media (max-width: 768px) {
+}
+
+/* --------------- 500px Screens --------------- */
+
+@media (max-width: 500px) {
+}
 
 
 
