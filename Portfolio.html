@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Amal KA </title>
-  <link rel="icon" type="imsubject/x-icon" href="image/logo.png">
+  <link rel="icon" type="imsubject/x-icon" href="image/logo_web.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Portofilo">
@@ -27,20 +27,19 @@
             <a href="#home" class="logo"><b>Amal</b><span> <b>Ka.</b></span></a>
             <div class="links">
                 <ul>
-                    <li><a href="#AboutMe"><i class="uil uil-user"></i> About Me</a></li>
-                    <li><a href="#Portfolio"><i class="uil uil-user-circle"></i> Portfolio</a></li>
-                    <li><a href="#Contact" ><i class="uil uil-comment-lines"></i> Contact</a></li>
+                    <li><a href="#AboutMe" class="nav-link"><i class="uil uil-user"></i> About Me</a></li>
+                    <li><a href="#Portfolio" class="nav-link"><i class="uil uil-user-circle"></i> Portfolio</a></li>
+                    <li><a href="#Contact" class="nav-link"><i class="uil uil-comment-lines"></i> Contact</a></li>
                 </ul>
-                 <!-- dark mood <i class="uil uil-moon toggle-btn"></i> -->
+                <i class="uil uil-moon toggle-btn"></i>
             </div>
         </nav>
        </header> 
-       <sectionx></section>
        <main>
         <section id="AboutMe" class="showcase-area">
             <div class="container">
+                <img src="image/square1.png" class="square" alt="shape square">
                 <div class="showcase-info">
-                    <img src="image/square1.png" class="square" alt="shape square">
                     <h5 class="sub-heading">Software Programmor</h5>
                     <h1 class="heaading">Amal Kalaepeh</h1>
                     <p class="text">hey I'm Amal, <mark>I'm 18 years old</mark>And an IT student at Fatoni University (FTU)</p> 
@@ -51,7 +50,7 @@
                     </div>
                 </div>
                 <div class="showcase-image">
-                   <br><img src="image/Lulu.png" class="prason" alt="Amal"><br>
+                   <br><img src="image/Lulu2.png" class="prason" alt="Amal"><br>
                     <img src="image/circle1.png" class="circle" alt="shape circle">
                     <img src="image/dots.png" class="dots" alt="shape dots">
                 </div>
@@ -61,9 +60,9 @@
         <section id="Portfolio" class="Portfolio">
             <div class="container">
                     <h3 class="sub-heading">Portfolio</h3>
-                    <p calss="tt">Here you can find my Portfolio</p>
+                    <p class="tt">Here you can find my Portfolio</p>
                     <picture>
-                        <img src="image/amal ka logo.png" class="logopic" alt="logo image">
+                        <img src="image/amal ka logo white.png" class="logopic" alt="logo image">
                     </picture><br>
                     <video class="video" controls>
                         <source src="image/about me vid.mp4" type="video/mp4">
@@ -71,42 +70,44 @@
                         <source src="image/about me vid.WebM" type="video/WebM">
                     </video>
                 <br>
-                    <audio class="Viocenote" controls> 
-                    <source src=".ogg" type="audio/ogg">
-                    <source src="horse.mp3" type="audio/mpeg">
+                    <audio class="Viocenote" controls>
                     </audio>     
                 </div>
              </div>
         </section>
             <!-- Contact Section -->
         <section id="Contact" class="Contact">
+            <img src="image/triangle.png" class="triangle">
             <div class="container">
-                <h3 class="sub-heading">CONTACT</h3>
-                <p >Let's get in touch. Send me a messsage:</p>
-                <div>
-                    <p><i class="uil uil-map-marker"></i> Yala, Thailan</p>
-                    <p><i class="uil uil-phone-alt"></i> Phone: +66 522 954 3404</p>
-                    <p><i class="uil uil-at"></i> Email: amalmudor@mail.com</p>
-                        <form action="Contact_us.php" target="_blank">
+                <img src="image/square2.png" class="square2">
+                <div class="contact-info">
+                <h4 class="sub-heading">CONTACT me</h4>
+                <h1 class="heaading">Let's keep in touch :)</h1>
+                    <p class="tt"><i class="uil uil-map-marker"></i> Yala, Thailan</p>
+                    <p class="tt"><i class="uil uil-phone-alt"></i> Phone: +66 522 954 3404</p>
+                    <a href="mailto:amalmudor@gmail.com"  class="email"><i class="uil uil-at"></i> amalmudor@gmail.com  <i class="uil uil-arrow-right"></i></a></div>
+                    <div>
+                        <form action="cta.php" class="cta-form" target="_blank">
+                            <h3>Send me a message</h3>
                             <select style="width:185px; " required>
                             <option>Select Your Title</option>
-                            <option value="black" style="color:var(--main-color-1)">Mr</option>
-                            <option value="black" style="color:black">Mrs</option>
-                            <option value="black" style="color:blueviolet">Miss</option>
-                            <option value="black" style="color:black">Master</option>
+                            <option value="black" style="color:rgb(118, 104, 104)">Mr</option>
+                            <option value="black" style="color:rgb(118, 104, 104)">Mrs</option>
+                            <option value="black" style="color:rgb(118, 104, 104)">Miss</option>
+                            <option value="black" style="color:rgb(118, 104, 104)">Master</option>
                             </select><br>
-                            <label for="name">NAME:</label><br>
-                            <input type="text" id="name" name="name"  value=""  placeholder="Your name And Lastname.." pattern="[A-Za-z]{.2}" title="9 letter for username" required><br>
-                            <label for="email">EMAIL:</label><br>
-                            <input type="email" id="email" name="email" value=""  placeholder="Your email.."  pattern="(.+@gmail\.com|.+@icloud\.com)" title="email can only be Gmail or icloud" required><br>
-                            <label for="subject">SUBJECT:</label><br>
-                            <input type="text" id="subject" name="subject" value="" placeholder="Write something.." pattern="[A-Za-z]{20}" title="handle 20 letter" required><br>
-                            <label for="message">MESSAGE:</label><br>
-                            <textarea type="text" id="message" name="message" value="" placeholder="Let us wher your voice.." style="height:200px"  required></textarea><br>
-                            <label for="img">Choose Your Portfolio</label>
-                            <input type="file" id="img" name="img" accept="image/png, .pdf" multiple >
-                            <input type="submit" value="Submit">
-                            <input type="checkbox" checked="checked" name="remember"> Remember me </label>
+                            <label for="name" class="cta-label">Name:</label><br>
+                            <input type="text" class="form-input" id="name" name="name"  value=""  placeholder="Your Name And Lastname.." pattern="[A-Za-z]{.2}" title="9 letter for username" required><br>
+                            <label for="email" class="cta-label">Email:</label><br>
+                            <input type="email" class="form-input" id="email" name="email" value=""  placeholder="example@gmail.com"  pattern="(.+@gmail\.com|.+@icloud\.com)" title="email can only be Gmail or icloud" required><br>
+                            <label for="subject" class="cta-label">Subject:</label><br>
+                            <input type="text" class="form-input" id="subject" name="subject" value="" placeholder="Write something.." pattern="[A-Za-z]{.2}" title="handle 20 letter" required><br>
+                            <label for="message" class="cta-label" >Message:</label><br>
+                            <textarea type="text" class="form-input" id="message" name="message" value="" placeholder="Let us Hear Your Voice.." style="height:200px"  required></textarea><br>
+                            <label for="photo" class="cta-label" >Choose Your Portfolio</label>
+                            <input type="file" class="form-photo" id="photo" name="photo" accept="image/png, .pdf" multiple>
+                            <input type="submit"class="btn" value="Submit"><br>
+                            <input type="checkbox" class="checkbox" checked="checked" name="remember"> Remember me </label>
                         </form>
                 </div>
             </div>
@@ -116,7 +117,28 @@
        <script src="JS.js"></script>
     </body>
     <!-------footer---------->
-    <footer class="footer">2022 All rights goes to Lu <i class="uil uil-closed-captioning"></i><br>
-        <img src="image/amal ka logo.png" class="logopic" alt="logo image">
+    <footer>
+     <div class="container">
+        
+        <img src="image/amal ka logo white.png" class="logopic" alt="logo image">
+        <p class="tt">&copy; Copyright 2022. All rights reserved</p>
+        <lu class="social-media">
+            <li>
+                <a href="#" class="social-link">
+                    <i class="uil uil-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-link">
+                    <i class="uil uil-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-link">
+                    <i class="uil uil-linkedin-alt"></i>
+                </a>
+            </li>
+        </lu>
+     </div>
     </footer>
 </html>
