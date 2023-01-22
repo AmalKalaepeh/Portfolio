@@ -1,2 +1,2 @@
 # Portfolio
-It's a personal Portfolio Website include html, css &amp; some JS 
+It's a personal Portfolio Website using html, css &amp; some JS 
