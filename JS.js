@@ -1,8 +1,15 @@
 const header = document.querySelector("header");
 const links = document.querySelectorAll(".nav-link");
 const toggle_btn = document.querySelector(".toggle-btn");
+const first_skill =document.querySelector(".skill:first-child");
+const sk_counter = document.querySelectorAll(".counter span");
+const progress_bars = document.querySelectorAll(".skills svg circle");
 
 window.addEventListener("scroll", ()=> {
+    skillsCounter();
+
+});
+    window.addEventListener("scroll", ()=> {
     activeLink();
 });
 /* ----------------------Sticky NAvbar -----------------------*/
@@ -65,3 +72,48 @@ function changeTheme(isDark){
 toggle_btn.addEventListener("click", () => {
     changeTheme(!document.body.classList.contains("dark"));
 });
+
+/* ----------------------skills Progress Bar Animation -----------------------*/
+
+
+
+
+function hasReached(el){
+    let topPosition = el.getBoundingClientRect().top;
+
+if(window.innerHeight >= topPosition + el.offsetHeight)
+    return true;
+    return false;
+}
+
+function updateCount(num, maxNum){
+    let currentNum = +num.innerText
+
+    if(currentNum < maxNum) {
+        num.innerText = currentNum + 1;
+        setTimeout(() => {
+            updateCount(num, maxNum);
+        }, 12);
+    }
+}
+
+
+function skillsCounter() {
+    if(!hasReached(first_skill)) return;
+
+
+    sk_counter.forEach((counter, i) => {
+        let target = +counter.dataset.target;
+        let strokeValue = 427 - 427 * (target / 100);
+
+        progress_bars[i].style.setProperty("--target", strokeValue);
+
+        setTimeout(() => {
+            updateCount(counter, target);
+        }, 400);
+    });
+
+    progress_bars.forEach(
+        (p) => (p.style.animation = "progress 2s ease-in-out forwards")
+    );
+};
